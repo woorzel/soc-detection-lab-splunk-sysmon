@@ -57,7 +57,7 @@ Detection of encoded or execution-policy bypass PowerShell activity.
 
 -   **Technique:** T1059.001 --- PowerShell\
 -   **Tactic:** Execution\
--   **SPL Query:** `searches/powershell_encoded_detection.spl`\
+-   **SPL Query:** `searches/powershell_encoded_detection.spl`
 -   **Documentation:** `detections/T1059_powershell.md`
 
 Detection logic includes: - encoded commands (`-enc`,
@@ -71,9 +71,9 @@ Alert configured as scheduled search triggering on detection results.
 
 Detection of potential abuse of trusted Windows binaries.
 
--   **Technique:** T1218 --- Signed Binary Proxy Execution\
--   **Tactic:** Defense Evasion\
--   **SPL Query:** `searches/signed_binary_proxy_execution.spl`\
+-   **Technique:** T1218 --- Signed Binary Proxy Execution
+-   **Tactic:** Defense Evasion
+-   **SPL Query:** `searches/signed_binary_proxy_execution.spl`
 -   **Documentation:** `detections/T1218_signed_binary_proxy.md`
 
 Monitored binaries: - `mshta.exe` - `rundll32.exe`
