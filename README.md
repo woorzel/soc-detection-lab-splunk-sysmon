@@ -55,8 +55,8 @@ Splunk Enterprise (Linux VM)
 
 Detection of encoded or execution-policy bypass PowerShell activity.
 
--   **Technique:** T1059.001 --- PowerShell\
--   **Tactic:** Execution\
+-   **Technique:** T1059.001 --- PowerShell
+-   **Tactic:** Execution
 -   **SPL Query:** `searches/powershell_encoded_detection.spl`
 -   **Documentation:** `detections/T1059_powershell.md`
 
