@@ -1,0 +1,12 @@
+index=windows EventCode=1 (
+  Image="*powershell.exe" OR Image="*mshta.exe" OR Image="*rundll32.exe*"
+)
+| eval detection=case(
+    Image like "%powershell.exe%" AND match(CommandLine,"(?i)(-enc|-encodedcommand|bypass|iex)"), "T1059 PowerShell",
+    Image like "%mshta.exe%", "T1218 LOLBins",
+    Image like "%rundll32.exe%", "T1218 LOLBins",
+    true(), "Other"
+  )
+| where detection!="Other"
+| table _time host User Image CommandLine ParentImage detection
+| sort -_time

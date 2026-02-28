@@ -1,0 +1,8 @@
+index=windows EventCode=1
+(Image="*mshta.exe" OR Image="*rundll32.exe*")
+| eval technique="T1218 - Signed Binary Proxy Execution"
+| eval tactic="Defense Evasion"
+| eval severity="Medium"
+| eval detection_name="Suspicious LOLBins Execution"
+| table _time host User Image CommandLine ParentImage tactic technique severity detection_name
+| sort -_time

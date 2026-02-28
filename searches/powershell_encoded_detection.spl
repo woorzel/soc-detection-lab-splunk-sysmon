@@ -1,0 +1,9 @@
+index=windows EventCode=1 Image="*powershell.exe"
+| eval suspicious=if(match(CommandLine,"(?i)(-enc|-encodedcommand|bypass|iex)"),"YES","NO")
+| where suspicious="YES"
+| eval technique="T1059.001 - PowerShell"
+| eval tactic="Execution"
+| eval severity="Medium"
+| eval detection_name="Suspicious PowerShell Encoded Command"
+| table _time host User Image CommandLine ParentImage tactic technique severity detection_name
+| sort -_time
