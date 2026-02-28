@@ -51,7 +51,7 @@ Splunk Enterprise (Linux VM)
 
 ##  Implemented Detections (MITRE ATT&CK)
 
-### 1️ Suspicious PowerShell Execution
+###  Suspicious PowerShell Execution
 
 Detection of encoded or execution-policy bypass PowerShell activity.
 
@@ -67,7 +67,7 @@ execution (`iex`)
 Alert configured as scheduled search triggering on detection results.
 
 
-### 2️⃣ Signed Binary Proxy Execution (LOLBins)
+###  Signed Binary Proxy Execution (LOLBins)
 
 Detection of potential abuse of trusted Windows binaries.
 
@@ -79,7 +79,7 @@ Detection of potential abuse of trusted Windows binaries.
 Monitored binaries: - `mshta.exe` - `rundll32.exe`
 
 
-## 🚨 Alert Configuration
+##  Alert Configuration
 
 Alerts are implemented as **Scheduled Searches** in Splunk:
 
