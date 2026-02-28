@@ -73,13 +73,15 @@ Monitored binaries: - `mshta.exe` - `rundll32.exe`
 
 Alerts are implemented as **Scheduled Searches** in Splunk:
 
-  Setting      Value
-  ------------ -------------------------
-  Schedule     Every 5 minutes
-  Time Range   Last 5 minutes
-  Trigger      For each result
-  Throttle     15 minutes
-  Action       Add to Triggered Alerts
+Schedule: Every 5 minutes
+
+Time Range: Last 5 minutes
+
+Trigger: For each result
+
+Throttle: 15 minutes
+
+Action: Add to Triggered Alerts
 
 Screenshots available in `/screenshots`.
 
