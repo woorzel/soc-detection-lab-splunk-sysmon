@@ -39,16 +39,6 @@ Splunk Enterprise (Linux VM)
 
 **Log Source** - `Microsoft-Windows-Sysmon/Operational`
 
-**Key Events**
-
-  Event ID   Description       Usage
-  ---------- ----------------- --------------------------
-  1          Process Create    Primary detection source
-  3          Network Connect   (planned)
-  11         File Create       (planned)
-  22         DNS Query         (planned)
-
-
 ##  Implemented Detections (MITRE ATT&CK)
 
 ###  Suspicious PowerShell Execution
